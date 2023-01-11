@@ -136,7 +136,7 @@ class HomePage extends StatelessWidget {
                       assets: "assets/image2.png",
                       title: "Renovasi",
                       handleTap: () =>
-                          Navigator.pushNamed(context, MyRoutes.pembangunan),
+                          Navigator.pushNamed(context, MyRoutes.renovasi),
                     ),
                     BoxDashboard(
                       assets: "assets/image3.png",
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                       assets: "assets/image4.png",
                       title: "Konsultasi Bangunan",
                       handleTap: () =>
-                          Navigator.pushNamed(context, MyRoutes.pembangunan),
+                          Navigator.pushNamed(context, MyRoutes.bangunan),
                     ),
                   ],
                 ),
