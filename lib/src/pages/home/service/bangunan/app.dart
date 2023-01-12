@@ -14,36 +14,36 @@ class _BangunanPageState extends State<BangunanPage> {
   final List<Map> bangunan = List.generate(8, (index) => {"id": index, "name": "Bangunan $index"}).toList();
   final List<Map<String, String>> data = [
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Kamar Tidur",
+      "asset":"assets/bangunan/image28.png"
     },
     {
       "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "asset":"assets/bangunan/image29.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Ruang Tamu",
+      "asset":"assets/bangunan/image31.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Ruang Keluarga",
+      "asset":"assets/bangunan/image30.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Dapur",
+      "asset":"assets/bangunan/image32.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Rooftop",
+      "asset":"assets/bangunan/image33.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Cafe",
+      "asset":"assets/bangunan/image34.png"
     },
     {
-      "name": "Kamar Mandi",
-      "asset":'assets/image1.png'
+      "name": "Kolam Renang",
+      "asset":"assets/bangunan/image35.png"
     },
   ]; 
   Future getData() async {
@@ -92,7 +92,7 @@ class _BangunanPageState extends State<BangunanPage> {
               itemBuilder: (BuildContext, index) {
                 // print(data[index]["name"]);
                 return BoxBangunan(title: data[index]["name"] as String, 
-                asset: data[index]['asset'] as String
+                asset: data[index]["asset"] as String
                 );
               },),
           )
