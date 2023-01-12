@@ -12,6 +12,146 @@ class RenovasiPage extends StatelessWidget {
         title: const Text('Renovasi'),
         elevation: 0
       ),
+      body: Container(
+        margin: const EdgeInsets.all(35),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 25,
+                  horizontal: 40,
+                ),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: ThemeApp.dark,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors.yellow,
+                    ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    const Text(
+                      'Listrik',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 25,
+                  horizontal: 40
+                ),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: ThemeApp.dark
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors.purple,
+                    ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    const Text(
+                      'Atap',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 25,
+                  horizontal: 40
+                ),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: ThemeApp.dark
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Color.fromARGB(255, 172, 0, 103),
+                    ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    const Text(
+                      'Sanitari',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 25,
+                  horizontal: 40
+                ),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: ThemeApp.dark
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Color.fromARGB(255, 1, 143, 136),
+                    ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    const Text(
+                      'Pengecetan',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          )
+      )
     );
   }
 }
