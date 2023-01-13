@@ -131,10 +131,15 @@ class BoxBangunan extends StatelessWidget {
               )
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
           Text(
             title,
-            style: const TextStyle(color: Colors.white,
-            fontSize: 24),
+            style: const TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            ),
           ),
         ],
       ),

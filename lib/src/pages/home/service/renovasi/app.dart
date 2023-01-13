@@ -29,9 +29,13 @@ class RenovasiPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
-                      color: Colors.yellow,
+                      height: 60,
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/renovasi/image20.png")
+                        )
+                      ),
                     ),
                     const SizedBox(
                       width: 50,
@@ -63,9 +67,13 @@ class RenovasiPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
-                      color: Colors.purple,
+                      height: 60,
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/renovasi/image21.png")
+                        )
+                      ),
                     ),
                     const SizedBox(
                       width: 50,
@@ -97,9 +105,13 @@ class RenovasiPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
-                      color: Color.fromARGB(255, 172, 0, 103),
+                      height: 60,
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/renovasi/image22.png")
+                        )
+                      ),
                     ),
                     const SizedBox(
                       width: 50,
@@ -131,9 +143,13 @@ class RenovasiPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
-                      color: Color.fromARGB(255, 1, 143, 136),
+                      height: 60,
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/renovasi/image23.png")
+                        )
+                      ),
                     ),
                     const SizedBox(
                       width: 50,

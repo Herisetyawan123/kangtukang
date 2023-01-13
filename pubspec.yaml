@@ -35,9 +35,9 @@ flutter:
     - assets/landing/
     - assets/method/
     - assets/pembangunan/
-    - assets/bangunan/
-    - assets/interior/
     - assets/renovasi/
+    - assets/interior/
+    - assets/bangunan/
 
   # fonts:
   #   - family: Schyler
