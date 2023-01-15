@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:kang_tukang/src/pages/home/detail/penyedia.dart';
 import 'package:kang_tukang/src/pages/home/service/bangunan/app.dart';
 import 'package:kang_tukang/src/pages/home/service/konsultasi/app.dart';
 import 'package:kang_tukang/src/pages/home/service/pembangunan/app.dart';
@@ -26,6 +27,7 @@ class MyRoutes {
   static const konsultasi = "/konsultasi";
   static const renovasi = "/renovasi";
   static const bangunan = "/bangunan";
+  static const penyedia = "/penyedia";
 
   static final data = <String, WidgetBuilder>{
     landing: (_) => const LandingPage(),
@@ -38,6 +40,7 @@ class MyRoutes {
     pembangunan: (_) => const PembangunanPage(),
     konsultasi: (_) => const KonsultasiPage(),
     renovasi: (_) => const RenovasiPage(),
-    bangunan:(_) => const BangunanPage() 
+    bangunan:(_) => const BangunanPage(),
+    penyedia: (_) => const PenyediaJasa()
   };
 }

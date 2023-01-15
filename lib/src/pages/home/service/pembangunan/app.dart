@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kang_tukang/src/constants/theme.dart';
 import 'package:kang_tukang/src/models/ppembangunan_modal.dart';
+import 'package:kang_tukang/src/routes/routes.dart';
 import 'package:kang_tukang/src/services/pembangunan_service.dart';
 import 'package:kang_tukang/src/utils/laoding.dart';
 
@@ -62,6 +63,7 @@ class _PembangunanPageState extends State<PembangunanPage> {
                   return BoxService(
                     title: pembangunan[index].title as String,
                     assets: pembangunan[index].assets as String,
+                    handleTap: () => Navigator.pushNamed(context, MyRoutes.penyedia),
                   );
                 },
               ),
