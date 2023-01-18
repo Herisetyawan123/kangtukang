@@ -38,6 +38,7 @@ flutter:
     - assets/renovasi/
     - assets/interior/
     - assets/bangunan/
+    - assets/penyedia_jasa/
 
   # fonts:
   #   - family: Schyler
