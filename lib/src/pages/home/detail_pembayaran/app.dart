@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kang_tukang/src/constants/theme.dart';
+import 'package:kang_tukang/src/routes/routes.dart';
 
 class DetailPembayaran extends StatelessWidget {
   const DetailPembayaran({super.key});
@@ -49,31 +50,34 @@ class DetailPembayaran extends StatelessWidget {
                 ],
               ),
             )),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
-                  color: Colors.white),
+            InkWell(
+              onTap: () => Navigator.pushNamed(context, MyRoutes.suksesPembayaran),
               child: Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 14,
-                ),
                 width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
                 decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  color: ThemeApp.dark,
-                ),
-                child: const Center(
-                  child: Text(
-                    'Konfirmasi Pembayaran',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+                    ),
+                    color: Colors.white),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 14,
+                  ),
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: ThemeApp.dark,
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Konfirmasi Pembayaran',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -84,7 +88,7 @@ class DetailPembayaran extends StatelessWidget {
 }
 
 class JenisPayment extends StatelessWidget {
-  const JenisPayment({Key? key, required this.asset, required this.title})
+  const JenisPayment({Key? key, required this.asset, required this.title, required})
       : super(key: key);
 
   final String asset;

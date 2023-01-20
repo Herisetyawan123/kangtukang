@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kang_tukang/src/constants/theme.dart';
+import 'package:kang_tukang/src/routes/routes.dart';
 
 class PenyediaJasa extends StatelessWidget {
   const PenyediaJasa({super.key});
@@ -126,53 +127,56 @@ class BoxPenyediaJasa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 30),
-      padding: const EdgeInsets.symmetric(
-        vertical: 15,
-        horizontal: 20,
-      ),
-      width: MediaQuery.of(context).size.width,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-        color: ThemeApp.dark,
-      ),
-      child: Row(
-        children: [
-          Container(
-            height: 80,
-            width: 80,
-            decoration: BoxDecoration(
-                color: ThemeApp.primary,
-                borderRadius: const BorderRadius.all(Radius.circular(20)),
-                image: DecorationImage(image: AssetImage(asset))),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                jasa,
-                style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                group,
-                style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: Color.fromARGB(255, 139, 139, 139)),
-              ),
-            ],
-          ),
-        ],
+    return InkWell(
+      onTap: () => Navigator.pushNamed(context, MyRoutes.pembayaran),
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(
+          vertical: 15,
+          horizontal: 20,
+        ),
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          color: ThemeApp.dark,
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                  color: ThemeApp.primary,
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  image: DecorationImage(image: AssetImage(asset))),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  jasa,
+                  style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  group,
+                  style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(255, 139, 139, 139)),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

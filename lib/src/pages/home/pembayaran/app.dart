@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kang_tukang/src/constants/theme.dart';
+import 'package:kang_tukang/src/routes/routes.dart';
 
 class Pembayaran extends StatelessWidget {
   const Pembayaran({super.key});
@@ -90,21 +91,24 @@ class Pembayaran extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 14,
-                  ),
-                  width: MediaQuery.of(context).size.width,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.white,
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Pembayaran',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600
+                InkWell(
+                  onTap: () => Navigator.pushNamed(context, MyRoutes.detailPembayaran),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 14,
+                    ),
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Colors.white,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Pembayaran',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600
+                        ),
                       ),
                     ),
                   ),

@@ -6,6 +6,7 @@ import 'package:kang_tukang/src/pages/home/service/bangunan/app.dart';
 import 'package:kang_tukang/src/pages/home/service/konsultasi/app.dart';
 import 'package:kang_tukang/src/pages/home/service/pembangunan/app.dart';
 import 'package:kang_tukang/src/pages/home/service/renovasi/app.dart';
+import 'package:kang_tukang/src/pages/home/suksesPayment/sukses.dart';
 
 import '../pages/Auth/landing.dart';
 import '../pages/Auth/signin.dart';
@@ -32,6 +33,7 @@ class MyRoutes {
   static const penyedia = "/penyedia";
   static const pembayaran = "/pembayaran";
   static const detailPembayaran = '/detailpembayaran';
+  static const suksesPembayaran = '/suksespembayaran';
 
   static final data = <String, WidgetBuilder>{
     landing: (_) => const LandingPage(),
@@ -48,5 +50,6 @@ class MyRoutes {
     penyedia: (_) => const PenyediaJasa(),
     pembayaran: (_) => const Pembayaran(),
     detailPembayaran: (_) => const DetailPembayaran(),
+    suksesPembayaran: (_) => const Success(),
   };
 }
