@@ -128,7 +128,7 @@ class BoxPenyediaJasa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.pushNamed(context, MyRoutes.pembayaran),
+      onTap: () => Navigator.pushNamed(context, MyRoutes.detailPenyedia),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 30),
         padding: const EdgeInsets.symmetric(
