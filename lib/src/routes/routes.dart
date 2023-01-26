@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:kang_tukang/src/pages/home/calender_table/app.dart';
 import 'package:kang_tukang/src/pages/home/detail_penyedia/app.dart';
 import 'package:kang_tukang/src/pages/home/penyedia/penyedia.dart';
 import 'package:kang_tukang/src/pages/home/detail_pembayaran/app.dart';
@@ -36,6 +37,7 @@ class MyRoutes {
   static const detailPembayaran = '/detailpembayaran';
   static const suksesPembayaran = '/suksespembayaran';
   static const detailPenyedia = '/detailpenyedia';
+  static const calenderTable = '/calenderTable';
 
   static final data = <String, WidgetBuilder>{
     landing: (_) => const LandingPage(),
@@ -48,11 +50,12 @@ class MyRoutes {
     pembangunan: (_) => const PembangunanPage(),
     konsultasi: (_) => const KonsultasiPage(),
     renovasi: (_) => const RenovasiPage(),
-    bangunan:(_) => const BangunanPage(),
+    bangunan: (_) => const BangunanPage(),
     penyedia: (_) => const PenyediaJasa(),
     pembayaran: (_) => const Pembayaran(),
     detailPembayaran: (_) => const DetailPembayaran(),
     suksesPembayaran: (_) => const Success(),
     detailPenyedia: (_) => const DetailPenyedia(),
+    calenderTable: (_) => const CalenderPage(),
   };
 }

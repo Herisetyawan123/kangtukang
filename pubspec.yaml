@@ -19,6 +19,7 @@ dependencies:
   flutter_screenutil: ^5.6.0
   firebase_auth: ^4.2.5
   shared_preferences: ^2.0.15
+  table_calendar: ^3.0.8
 
 dev_dependencies:
   flutter_test:

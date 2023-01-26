@@ -63,7 +63,8 @@ class _PembangunanPageState extends State<PembangunanPage> {
                   return BoxService(
                     title: pembangunan[index].title as String,
                     assets: pembangunan[index].assets as String,
-                    handleTap: () => Navigator.pushNamed(context, MyRoutes.penyedia),
+                    handleTap: () =>
+                        Navigator.pushNamed(context, MyRoutes.penyedia),
                   );
                 },
               ),

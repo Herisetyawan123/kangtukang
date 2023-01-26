@@ -10,7 +10,6 @@ Future main() async {
   await Firebase.initializeApp();
   // inisialisasi SharedPrefrences
   final session = await SharedPreferences.getInstance();
-
   if (session.getString("id") == null) {
     runApp(
       MyApp(
