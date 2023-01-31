@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:kang_tukang/src/pages/home/calender_table/app.dart';
 import 'package:kang_tukang/src/pages/home/detail_penyedia/app.dart';
+import 'package:kang_tukang/src/pages/home/map_choose/app.dart';
 import 'package:kang_tukang/src/pages/home/penyedia/penyedia.dart';
 import 'package:kang_tukang/src/pages/home/detail_pembayaran/app.dart';
 import 'package:kang_tukang/src/pages/home/pembayaran/app.dart';
@@ -38,6 +39,7 @@ class MyRoutes {
   static const suksesPembayaran = '/suksespembayaran';
   static const detailPenyedia = '/detailpenyedia';
   static const calenderTable = '/calenderTable';
+  static const mappage = '/mappage';
 
   static final data = <String, WidgetBuilder>{
     landing: (_) => const LandingPage(),
@@ -57,5 +59,6 @@ class MyRoutes {
     suksesPembayaran: (_) => const Success(),
     detailPenyedia: (_) => const DetailPenyedia(),
     calenderTable: (_) => const CalenderPage(),
+    mappage: (_) => const MapPage(),
   };
 }

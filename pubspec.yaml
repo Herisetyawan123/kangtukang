@@ -20,6 +20,10 @@ dependencies:
   firebase_auth: ^4.2.5
   shared_preferences: ^2.0.15
   table_calendar: ^3.0.8
+  flutter_map: ^2.2.0
+  open_street_map_search_and_pick: ^0.0.12
+  url_launcher: ^6.1.8
+
 
 dev_dependencies:
   flutter_test:

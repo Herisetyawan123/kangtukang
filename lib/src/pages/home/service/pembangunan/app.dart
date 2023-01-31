@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kang_tukang/src/constants/theme.dart';
-import 'package:kang_tukang/src/models/ppembangunan_modal.dart';
+
 import 'package:kang_tukang/src/routes/routes.dart';
-import 'package:kang_tukang/src/services/pembangunan_service.dart';
-import 'package:kang_tukang/src/utils/laoding.dart';
 
 class PembangunanPage extends StatefulWidget {
   const PembangunanPage({Key? key}) : super(key: key);
@@ -13,21 +11,43 @@ class PembangunanPage extends StatefulWidget {
 }
 
 class _PembangunanPageState extends State<PembangunanPage> {
-  bool loading = true;
-  List<PembangunanModel> pembangunan = [];
-  Future getData() async {
-    final data = await PembangunanService().getAll();
-    setState(() {
-      pembangunan = data;
-      loading = false;
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
+  List pembangunan = [
+    {
+      "title": "Rumah",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p1.png"
+    },
+    {
+      "title": "Kolam renang",
+      "description": null,
+      "assets": "assets/pembangunan/p7.png"
+    },
+    {
+      "title": "Pagar",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p2.png"
+    },
+    {
+      "title": "Sumur Bor",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p6.png"
+    },
+    {
+      "title": "Kolam Ikan",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p5.png"
+    },
+    {
+      "title": "Taman",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p3.png"
+    },
+    {
+      "title": "Kanopi",
+      "description": "Memberikan Jasa Pembangunan Yang  Modern Dan Elegan",
+      "assets": "assets/pembangunan/p4.png"
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -38,37 +58,24 @@ class _PembangunanPageState extends State<PembangunanPage> {
         backgroundColor: ThemeApp.white,
         elevation: 0,
       ),
-      body: loading
-          ? SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  CustomLoading(),
-                ],
-              ),
-            )
-          : Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              padding: const EdgeInsets.all(20),
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                ),
-                itemCount: pembangunan.length,
-                itemBuilder: (BuildContext context, index) {
-                  return BoxService(
-                    title: pembangunan[index].title as String,
-                    assets: pembangunan[index].assets as String,
-                    handleTap: () =>
-                        Navigator.pushNamed(context, MyRoutes.penyedia),
-                  );
-                },
-              ),
-            ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        padding: const EdgeInsets.all(20),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          itemCount: pembangunan.length,
+          itemBuilder: (BuildContext context, index) {
+            return BoxService(
+              title: pembangunan[index]["title"] as String,
+              assets: pembangunan[index]["assets"] as String,
+              handleTap: () => Navigator.pushNamed(context, MyRoutes.penyedia),
+            );
+          },
+        ),
+      ),
     );
   }
 }

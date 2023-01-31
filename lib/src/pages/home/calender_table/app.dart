@@ -159,7 +159,7 @@ class _CalenderPageState extends State<CalenderPage> {
                     child: InkWell(
                       onTap: () => Navigator.pushNamed(
                         context,
-                        MyRoutes.detailPembayaran,
+                        MyRoutes.mappage,
                       ),
                       child: Container(
                         padding: const EdgeInsets.symmetric(
